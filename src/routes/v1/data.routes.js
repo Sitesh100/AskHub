@@ -1,3 +1,4 @@
+
 const express = require('express');
 
 const { dataController } = require('../../controllers/index.js');
@@ -15,6 +16,8 @@ dataRouter.post('/questions', dataController.addQuestion);
 dataRouter.get('/questions/search', dataController.getQuestion);
 
 dataRouter.post('/questions/:id/answers', dataController.answerQuestion);
+
+dataRouter.put('answers./:id', dataController.editAsnweredQuestion);
 
 
 module.exports = dataRouter;
